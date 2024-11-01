@@ -1,9 +1,7 @@
 # Changes Log
 
-## HarmonyGenerator.h
-- Added declaration for `validateHarmonyLevel(float level)` to validate the harmony level.
+## HarmonyGeneratorTest.cpp
+- Consolidated test cases from `harmony_generator_tests.cpp` into `HarmonyGeneratorTest.cpp` to avoid redundancy.
 
-## Directory Structure Adjustments
-- Adjusted the directory structure to align with the requirements specified in 'README.md'.
-- Ensured that all source files are organized under the 'Source' directory, with appropriate subdirectories for 'Core' and 'GUI'.
-- Verified that test files are located in the 'Tests' directory under the appropriate subdirectory.
+## Redundant File Removal
+- Removed `harmony_generator_tests.cpp` as it contained duplicate test cases.
