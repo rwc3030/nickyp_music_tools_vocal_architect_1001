@@ -20,7 +20,7 @@
 All issues have been resolved, and the feature is now marked as complete.
 
 ### Final Notes
-The feature has passed all checks and is ready for deployment.
+The feature has passed all checks and is ready for deployment. All tasks in 'next_feature.txt' have been completed.
 
 ### Current Task
 - Task: Review 'checklist.md' for the next task.

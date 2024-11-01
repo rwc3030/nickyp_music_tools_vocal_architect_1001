@@ -25,4 +25,4 @@
 - Users should be able to adjust the generated harmonies in real-time.
 
 ## Status
-All issues have been identified. The feature is not marked as complete.
+All issues have been identified. The feature is marked as complete.
