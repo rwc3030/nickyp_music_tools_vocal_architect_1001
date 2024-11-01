@@ -26,7 +26,6 @@ void HarmonyGenerator::generateHarmonies() {
         return; // Exit if the harmony level is invalid
     }
 
-    // Check if the input vocal track is empty
     // Additional harmony generation logic goes here
 }
 
