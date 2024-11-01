@@ -13,22 +13,22 @@ void HarmonyGenerator::resized() {
 }
 
 void HarmonyGenerator::setInputVocalTrack(const String& track) {
-    inputVocalTrack = track;
+    inputVocalTrack = track; // Store the input vocal track for harmony generation
 }
 
 void HarmonyGenerator::generateHarmonies() {
-    float harmonyLevel = harmonySlider.getValue();
+    float harmonyLevel = harmonySlider.getValue(); // Get the current harmony level from the slider
 
     // Check if the input vocal track is empty
     if (inputVocalTrack.isEmpty()) {
         DBG("Input vocal track is empty. Cannot generate harmonies.");
-        return;
+        return; // Exit if no input is provided
     }
 
     // Check for extreme values for harmony levels
     if (harmonyLevel < 0.0f || harmonyLevel > 1.0f) {
         DBG("Harmony level out of bounds. Must be between 0.0 and 1.0.");
-        return;
+        return; // Exit if harmony level is out of bounds
     }
 
     // Logic to generate harmonies based on the input vocal track and harmony level
