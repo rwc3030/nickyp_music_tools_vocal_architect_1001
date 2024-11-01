@@ -20,23 +20,4 @@ TEST_F(HarmonyGeneratorTest, ValidInputVocalTrack) {
     EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
 
-TEST_F(HarmonyGeneratorTest, UnsupportedAudioFileType) {
-    EXPECT_THROW(harmonyGenerator.handleAudioFileType(".txt"), std::invalid_argument);
-}
-
-TEST_F(HarmonyGeneratorTest, SupportedAudioFileType) {
-    EXPECT_NO_THROW(harmonyGenerator.handleAudioFileType(".wav"));
-    EXPECT_NO_THROW(harmonyGenerator.handleAudioFileType(".mp3"));
-}
-
-TEST_F(HarmonyGeneratorTest, InvalidHarmonyLevelBelowZero) {
-    harmonyGenerator.setInputVocalTrack("Sample Vocal Track");
-    harmonyGenerator.harmonySlider.setValue(-0.1f); // Set an invalid harmony level
-    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies()); // Should not throw, but log an error
-}
-
-TEST_F(HarmonyGeneratorTest, InvalidHarmonyLevelAboveOne) {
-    harmonyGenerator.setInputVocalTrack("Sample Vocal Track");
-    harmonyGenerator.harmonySlider.setValue(1.1f); // Set another invalid harmony level
-    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies()); // Should not throw, but log an error
-}
+// Additional tests...

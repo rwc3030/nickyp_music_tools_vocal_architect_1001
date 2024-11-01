@@ -10,3 +10,5 @@ HarmonyControl::HarmonyControl(HarmonyGenerator& generator) : harmonyGenerator(g
 void HarmonyControl::resized() {
     harmonySlider.setBounds(10, 10, getWidth() - 20, 20); // Set bounds for the slider
 }
+
+// Additional methods and logic...
