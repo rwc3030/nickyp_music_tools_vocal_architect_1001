@@ -16,16 +16,17 @@ TEST_F(HarmonyGeneratorTest, EmptyInputVocalTrack) {
 }
 
 TEST_F(HarmonyGeneratorTest, ValidInputVocalTrack) {
-    harmonyGenerator.setInputVocalTrack("Sample Vocal Track"); // Assuming a method to set the input
+    harmonyGenerator.setInputVocalTrack("Sample Vocal Track.wav"); // Assuming a method to set the input
     EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
 
-TEST_F(HarmonyGeneratorTest, EdgeCaseHandling) {
-    harmonyGenerator.setInputVocalTrack("Edge Case Track");
+TEST_F(HarmonyGeneratorTest, InvalidHarmonyLevel) {
+    harmonyGenerator.setInputVocalTrack("Sample Vocal Track.wav");
+    harmonyGenerator.harmonySlider.setValue(1.5); // Set an invalid harmony level
     EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
 
 TEST_F(HarmonyGeneratorTest, UnsupportedAudioFileType) {
-    harmonyGenerator.handleAudioFileType(".txt");
-    // Check for expected debug output or behavior
+    harmonyGenerator.setInputVocalTrack("Sample Vocal Track.txt");
+    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }

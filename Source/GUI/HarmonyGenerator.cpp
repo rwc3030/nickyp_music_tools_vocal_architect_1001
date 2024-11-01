@@ -26,11 +26,24 @@ void HarmonyGenerator::generateHarmonies() {
         return; // Exit if the harmony level is invalid
     }
 
-    // Additional harmony generation logic goes here
+    // Handle different audio file types and generate harmonies
+    if (!handleAudioFileType(inputVocalTrack)) {
+        DBG("Unsupported audio file type.");
+        return; // Exit if the audio file type is unsupported
+    }
+
+    // Logic to generate harmonies based on the input vocal track
+    // (Implementation of harmony generation logic goes here)
 }
 
 bool HarmonyGenerator::validateHarmonyLevel(float level) {
     return level >= 0.0f && level <= 1.0f; // Validate that the level is between 0 and 1
 }
 
-// Additional methods and logic...
+bool HarmonyGenerator::handleAudioFileType(const String& track) {
+    // Check the file extension and handle accordingly
+    if (track.endsWith(".wav") || track.endsWith(".mp3")) {
+        return true; // Supported formats
+    }
+    return false; // Unsupported formats
+}
