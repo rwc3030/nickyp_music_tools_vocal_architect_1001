@@ -26,7 +26,6 @@ void HarmonyGenerator::generateHarmonies() {
 
     // Logic to generate harmonies based on the input vocal track and harmony level
     // This is a placeholder for the actual harmony generation logic
-    // Implement handling for different audio file types if necessary
 }
 
 void HarmonyGenerator::handleAudioFileType(const String& fileType) {
