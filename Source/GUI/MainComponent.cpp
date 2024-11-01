@@ -14,7 +14,7 @@ MainComponent::MainComponent() {
             DBG("No input vocal track provided.");
             harmonyOutput.setText("No input vocal track provided.");
         } else {
-            harmonyOutput.setText("Harmony generation in progress...");
+            harmonyOutput.setText("Harmony generation complete!"); // Update UI with completion message
         }
     };
 }

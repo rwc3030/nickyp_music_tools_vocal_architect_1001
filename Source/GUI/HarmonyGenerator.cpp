@@ -13,6 +13,11 @@ void HarmonyGenerator::setInputVocalTrack(const String& track) {
     inputVocalTrack = track; // Store the input vocal track for harmony generation
 }
 
+// Get input vocal track
+String HarmonyGenerator::getInputVocalTrack() const {
+    return inputVocalTrack; // Return the stored input vocal track
+}
+
 // Generate harmonies
 void HarmonyGenerator::generateHarmonies() {
     // Check if the input vocal track is empty

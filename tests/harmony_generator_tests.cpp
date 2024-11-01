@@ -30,5 +30,6 @@ protected:
         harmonyGenerator.generateHarmonies();
         // Check for expected debug output
         EXPECT_TRUE(true); // Placeholder for actual feedback verification
+        // Here you would implement a way to verify the output message if possible
     }
 };
