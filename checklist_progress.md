@@ -25,3 +25,11 @@ The feature has passed all checks and is ready for deployment. All tasks in 'nex
 ### Current Task
 - Task: Review 'checklist.md' for the next task.
 - Status: In Progress
+- Milestone: Version 1.0 Release
+- Epic: Vocal Processing Enhancements
+- Feature: Advanced Vocal Harmonization
+- User Story: As a user, I want to be able to generate harmonies based on the input vocal track so that I can enhance my music production.
+- Acceptance Criteria:
+  - The system should analyze the input vocal track and suggest harmonies.
+  - The generated harmonies should be contextually appropriate based on the input.
+  - Users should be able to adjust the generated harmonies in real-time.
