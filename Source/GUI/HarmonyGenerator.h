@@ -3,19 +3,17 @@
 
 #include <JuceHeader.h>
 
-class HarmonyGenerator : public Component {
+class HarmonyGenerator {
 public:
     HarmonyGenerator();
     void setInputVocalTrack(const String& track);
     void generateHarmonies();
-    bool validateHarmonyLevel(float level); // Declaration for validateHarmonyLevel
-    bool handleAudioFileType(const String& track); // Declaration for handleAudioFileType
-    String getInputVocalTrack() const { return inputVocalTrack; } // Getter for input vocal track
+    bool validateHarmonyLevel(float level);
+    bool handleAudioFileType(const String& track);
 
 private:
-    String inputVocalTrack; // Stores the input vocal track
-    Slider harmonySlider; // Slider for adjusting harmony level
-    // Additional members...
+    String inputVocalTrack;
+    Slider harmonySlider;
 };
 
 #endif // HARMONY_GENERATOR_H

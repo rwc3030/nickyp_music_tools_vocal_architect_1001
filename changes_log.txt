@@ -3,3 +3,7 @@
 ## HarmonyGenerator.h
 - Added declaration for `validateHarmonyLevel(float level)` to validate the harmony level.
 
+## Directory Structure Adjustments
+- Adjusted the directory structure to align with the requirements specified in 'README.md'.
+- Ensured that all source files are organized under the 'Source' directory, with appropriate subdirectories for 'Core' and 'GUI'.
+- Verified that test files are located in the 'Tests' directory under the appropriate subdirectory.

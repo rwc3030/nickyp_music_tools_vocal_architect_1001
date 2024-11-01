@@ -1,5 +1,6 @@
 #include "HarmonyGenerator.h"
 
+// HarmonyGenerator constructor
 HarmonyGenerator::HarmonyGenerator() {
     harmonySlider.setRange(0.0, 1.0);
     harmonySlider.setValue(0.5);
@@ -7,10 +8,12 @@ HarmonyGenerator::HarmonyGenerator() {
     addAndMakeVisible(harmonySlider);
 }
 
+// Set input vocal track
 void HarmonyGenerator::setInputVocalTrack(const String& track) {
     inputVocalTrack = track; // Store the input vocal track for harmony generation
 }
 
+// Generate harmonies
 void HarmonyGenerator::generateHarmonies() {
     // Check if the input vocal track is empty
     if (inputVocalTrack.isEmpty()) {
@@ -27,14 +30,15 @@ void HarmonyGenerator::generateHarmonies() {
     }
 
     // Harmony generation logic goes here
-    DBG("Generating harmonies with level: " + String(harmonyLevel));
 }
 
+// Validate harmony level
 bool HarmonyGenerator::validateHarmonyLevel(float level) {
     // Validate that the level is between 0 and 1
     return level >= 0.0f && level <= 1.0f; 
 }
 
+// Handle audio file type
 bool HarmonyGenerator::handleAudioFileType(const String& track) {
     // Check the file extension and handle accordingly
     if (track.endsWith(".wav") || track.endsWith(".mp3")) {

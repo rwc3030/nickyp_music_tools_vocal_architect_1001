@@ -19,3 +19,9 @@
 1. **Bug in Harmony Generation**: Occasionally, the harmony generation process fails to produce output when the input vocal track is at the maximum harmony level.
 2. **UI Update Delay**: There is a noticeable delay in UI updates after the harmony generation process is initiated, which may confuse users.
 
+## File and Directory Structure Adjustments
+
+- Adjusted the directory structure to align with the requirements specified in 'README.md'.
+- Ensured that all source files are organized under the 'Source' directory, with appropriate subdirectories for 'Core' and 'GUI'.
+- Verified that test files are located in the 'Tests' directory under the appropriate subdirectory.
+

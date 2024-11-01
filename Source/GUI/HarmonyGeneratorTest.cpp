@@ -16,7 +16,7 @@ TEST_F(HarmonyGeneratorTest, EmptyInputVocalTrack) {
 }
 
 TEST_F(HarmonyGeneratorTest, ValidInputVocalTrack) {
-    harmonyGenerator.setInputVocalTrack("Sample Vocal Track.wav"); // Assuming a method to set the input
+    harmonyGenerator.setInputVocalTrack("Sample Vocal Track.wav"); // Assuming a method to set the 
     EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
 

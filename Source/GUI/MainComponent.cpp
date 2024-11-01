@@ -1,5 +1,6 @@
 #include "MainComponent.h"
 
+// MainComponent constructor
 MainComponent::MainComponent() {
     setSize(800, 600);
     addAndMakeVisible(harmonyGenerator);
@@ -10,10 +11,7 @@ MainComponent::MainComponent() {
         harmonyOutput.setText("Generating harmonies..."); // Update UI
         // Add feedback for completion
         if (harmonyGenerator.getInputVocalTrack().isEmpty()) {
-            harmonyOutput.setText("Failed to generate harmonies: Input track is empty."); // Update UI on failure
-        } else {
-            harmonyOutput.setText("Harmonies generated successfully!"); // Update UI after generation
+            DBG("No input vocal track provided.");
         }
     };
-    addAndMakeVisible(generateButton);
 }
