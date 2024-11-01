@@ -15,7 +15,8 @@ private:
     Slider harmonySlider; // Slider to control the harmony level
     String inputVocalTrack; // Input vocal track string
 
-    bool validateHarmonyLevel(float level); // Declaration for harmony level validation
+    // Validate the harmony level to ensure it is within the acceptable range
+    bool validateHarmonyLevel(float level); 
 };
 
 #endif // HARMONYGENERATOR_H
