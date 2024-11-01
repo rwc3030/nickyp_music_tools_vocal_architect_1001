@@ -15,23 +15,22 @@ TEST_F(HarmonyGeneratorTest, EmptyInputVocalTrack) {
     EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
 
+TEST_F(HarmonyGeneratorTest, ValidInputVocalTrack) {
+    harmonyGenerator.setInputVocalTrack("Sample Vocal Track"); // Assuming a method to set the input
+    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
+}
+
 TEST_F(HarmonyGeneratorTest, UnsupportedAudioFileType) {
-    harmonyGenerator.handleAudioFileType(".txt");
-    // Check for expected debug output or behavior
+    EXPECT_THROW(harmonyGenerator.handleAudioFileType(".txt"), std::invalid_argument);
 }
 
 TEST_F(HarmonyGeneratorTest, SupportedAudioFileType) {
-    harmonyGenerator.handleAudioFileType(".wav");
-    // Check for expected debug output or behavior
+    EXPECT_NO_THROW(harmonyGenerator.handleAudioFileType(".wav"));
+    EXPECT_NO_THROW(harmonyGenerator.handleAudioFileType(".mp3"));
 }
 
-TEST_F(HarmonyGeneratorTest, HarmonyGenerationWithVariousInputs) {
-    harmonyGenerator.setInputVocalTrack("Valid Vocal Track");
-    harmonyGenerator.generateHarmonies();
-    // Add assertions to verify the expected behavior
-}
-
-TEST_F(HarmonyGeneratorTest, HarmonyGenerationWithEmptyTrack) {
-    harmonyGenerator.setInputVocalTrack("");
-    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
+TEST_F(HarmonyGeneratorTest, ValidateHarmonyLevel) {
+    EXPECT_TRUE(harmonyGenerator.validateHarmonyLevel(0.5f)); // Valid level
+    EXPECT_FALSE(harmonyGenerator.validateHarmonyLevel(-0.1f)); // Invalid level
+    EXPECT_FALSE(harmonyGenerator.validateHarmonyLevel(1.1f)); // Invalid level
 }
