@@ -6,6 +6,7 @@
 2. Check for edge cases that may not have been handled.
    - Implement handling for empty or null input vocal tracks to prevent runtime errors.
    - Ensure that the harmony generation logic can handle various input formats (e.g., different audio file types).
+   - Add checks for extreme values for harmony levels (e.g., values below 0 or above 1).
 3. Ensure functional integrity across all components.
    - Add tests to verify harmony generation logic under various input conditions.
    - Verify that the UI updates correctly when the harmony generation process is initiated.
