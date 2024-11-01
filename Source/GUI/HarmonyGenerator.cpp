@@ -26,6 +26,4 @@ void HarmonyGenerator::generateHarmonies() {
 
     // Logic to generate harmonies based on the input vocal track and harmony level
     // This is a placeholder for the actual harmony generation logic
-    DBG("Generating harmonies for track: " + inputVocalTrack + " with harmony level: " + String(harmonyLevel));
 }
-
