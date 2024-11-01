@@ -29,7 +29,13 @@ void HarmonyGenerator::generateHarmonies() {
         return; // Exit if the harmony level is invalid
     }
 
+    // Notify that harmony generation is starting
+    DBG("Starting harmony generation...");
+    
     // Harmony generation logic goes here
+
+    // Notify that harmony generation is complete
+    DBG("Harmony generation complete.");
 }
 
 // Validate harmony level

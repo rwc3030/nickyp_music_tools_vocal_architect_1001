@@ -12,6 +12,8 @@ MainComponent::MainComponent() {
         // Add feedback for completion
         if (harmonyGenerator.getInputVocalTrack().isEmpty()) {
             DBG("No input vocal track provided.");
+        } else {
+            harmonyOutput.setText("Harmony generation in progress...");
         }
     };
 }
