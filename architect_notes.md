@@ -13,3 +13,9 @@
 2. **Repeated Code in UI Components**: The `MainComponent.cpp` and `HarmonyGenerator.cpp` files both have similar logic for handling UI updates and state management. This logic could be refactored into a shared utility function to reduce redundancy.
 
 3. **Similar Documentation**: The `README.md` and `design_functional_vision.md` files both describe the features of the VocalArchitect. Some sections overlap and could be merged or referenced to streamline documentation.
+
+## Bugs and Functional Issues
+
+1. **Bug in Harmony Generation**: Occasionally, the harmony generation process fails to produce output when the input vocal track is at the maximum harmony level.
+2. **UI Update Delay**: There is a noticeable delay in UI updates after the harmony generation process is initiated, which may confuse users.
+
