@@ -22,11 +22,11 @@ void HarmonyGenerator::generateHarmonies() {
 
     // Validate harmony level
     if (!validateHarmonyLevel(harmonyLevel)) {
-        DBG("Harmony level is out of bounds. Please set a value between 0 and 1.");
+        DBG("Invalid harmony level. Please set a value between 0 and 1.");
         return; // Exit if the harmony level is invalid
     }
 
-    // Additional logic for generating harmonies...
+    // Harmony generation logic goes here
 }
 
 bool HarmonyGenerator::validateHarmonyLevel(float level) {
