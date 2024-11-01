@@ -3,20 +3,17 @@
 
 #include <JuceHeader.h>
 
-class HarmonyGenerator : public Component {
+class HarmonyGenerator : public Component
+{
 public:
     HarmonyGenerator();
     void resized() override;
-    void paint(Graphics& g) override;
-
-    // Method to set the input vocal track
-    void setInputVocalTrack(const String& input) { inputVocalTrack = input; }
+    void generateHarmonies();
+    void setInputVocalTrack(const String& track);
 
 private:
-    void generateHarmonies();
-
     Slider harmonySlider;
-    String inputVocalTrack; // Variable to hold the input vocal track
+    String inputVocalTrack;
 };
 
 #endif // HARMONYGENERATOR_H
