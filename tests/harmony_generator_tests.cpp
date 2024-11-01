@@ -30,3 +30,9 @@ TEST_F(HarmonyGeneratorTest, UnsupportedAudioFileType) {
     harmonyGenerator.setInputVocalTrack("Sample Vocal Track.txt");
     EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
+
+TEST_F(HarmonyGeneratorTest, ValidHarmonyLevel) {
+    harmonyGenerator.setInputVocalTrack("Sample Vocal Track.wav");
+    harmonyGenerator.harmonySlider.setValue(0.5); // Set a valid harmony level
+    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
+}

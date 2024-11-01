@@ -9,7 +9,11 @@ MainComponent::MainComponent() {
         harmonyGenerator.generateHarmonies(); 
         harmonyOutput.setText("Generating harmonies..."); // Update UI
         // Add feedback for completion
-        harmonyOutput.setText("Harmonies generated successfully!"); // Update UI after generation
+        if (harmonyGenerator.getInputVocalTrack().isEmpty()) {
+            harmonyOutput.setText("Failed to generate harmonies: Input track is empty."); // Update UI on failure
+        } else {
+            harmonyOutput.setText("Harmonies generated successfully!"); // Update UI after generation
+        }
     };
     addAndMakeVisible(generateButton);
 }
