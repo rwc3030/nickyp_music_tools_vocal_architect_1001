@@ -11,6 +11,7 @@ public:
     void generateHarmonies();
     void setInputVocalTrack(const String& track);
     void handleAudioFileType(const String& fileType); // New method to handle different audio file types
+    bool validateHarmonyLevel(float level); // New method to validate harmony level
 
 private:
     Slider harmonySlider; // Slider to control harmony level
