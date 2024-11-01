@@ -2,6 +2,7 @@
 
 1. Review the generated code for logical flow.
    - Consider adding more descriptive comments in the code for clarity.
+   - Ensure that the harmony generation logic can handle various input formats (e.g., different audio file types).
 2. Check for edge cases that may not have been handled.
    - Implement handling for empty or null input vocal tracks to prevent runtime errors.
    - Ensure that the harmony generation logic can handle various input formats (e.g., different audio file types).
