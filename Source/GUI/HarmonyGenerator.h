@@ -10,6 +10,7 @@ public:
     void generateHarmonies();
     bool validateHarmonyLevel(float level);
     bool handleAudioFileType(const String& track);
+    String getInputVocalTrack() const; // New method to retrieve the input vocal track
 
 private:
     String inputVocalTrack;
