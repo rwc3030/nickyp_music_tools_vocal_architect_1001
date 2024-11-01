@@ -9,6 +9,12 @@
 3. Ensure functional integrity across all components.
    - Add tests to verify harmony generation logic under various input conditions.
    - Verify that the UI updates correctly when the harmony generation process is initiated.
+4. **Logical Flow**: 
+   - Ensure that the flow of data through the harmony generation process is clear and well-structured.
+5. **Edge Cases**: 
+   - Check for potential issues with extreme values for harmony levels (e.g., values below 0 or above 1).
+6. **Functional Integrity**: 
+   - Verify that all components interact correctly and that there are no unexpected behaviors during the harmony generation process.
 
 ## Milestone
 - Milestone: Version 1.0 Release
