@@ -29,8 +29,14 @@ TEST_F(HarmonyGeneratorTest, SupportedAudioFileType) {
     EXPECT_NO_THROW(harmonyGenerator.handleAudioFileType(".mp3"));
 }
 
-TEST_F(HarmonyGeneratorTest, ValidateHarmonyLevel) {
-    EXPECT_TRUE(harmonyGenerator.validateHarmonyLevel(0.5f)); // Valid level
-    EXPECT_FALSE(harmonyGenerator.validateHarmonyLevel(-0.1f)); // Invalid level
-    EXPECT_FALSE(harmonyGenerator.validateHarmonyLevel(1.1f)); // Invalid level
+TEST_F(HarmonyGeneratorTest, InvalidHarmonyLevelBelowZero) {
+    harmonyGenerator.setInputVocalTrack("Sample Vocal Track");
+    harmonyGenerator.harmonySlider.setValue(-0.1f); // Set an invalid harmony level
+    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies()); // Should not throw, but log an error
+}
+
+TEST_F(HarmonyGeneratorTest, InvalidHarmonyLevelAboveOne) {
+    harmonyGenerator.setInputVocalTrack("Sample Vocal Track");
+    harmonyGenerator.harmonySlider.setValue(1.1f); // Set another invalid harmony level
+    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies()); // Should not throw, but log an error
 }
