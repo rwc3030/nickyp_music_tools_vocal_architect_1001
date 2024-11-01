@@ -4,7 +4,6 @@ HarmonyGenerator::HarmonyGenerator() {
     harmonySlider.setRange(0.0, 1.0);
     harmonySlider.setValue(0.5);
     harmonySlider.setTextValueSuffix(" Harmony Level");
-    harmonySlider.onValueChange = [this] { generateHarmonies(); };
     addAndMakeVisible(harmonySlider);
 }
 
