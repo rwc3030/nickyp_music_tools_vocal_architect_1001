@@ -23,18 +23,11 @@ void HarmonyGenerator::generateHarmonies() {
 
     // Validate harmony level
     if (!validateHarmonyLevel(harmonyLevel)) {
-        DBG("Invalid harmony level. Must be between 0 and 1.");
+        DBG("Harmony level is out of bounds. Please set a value between 0 and 1.");
         return; // Exit if the harmony level is invalid
     }
 
-    // Handle different audio file types and generate harmonies
-    if (!handleAudioFileType(inputVocalTrack)) {
-        DBG("Unsupported audio file type.");
-        return; // Exit if the audio file type is unsupported
-    }
-
-    // Logic to generate harmonies based on the input vocal track
-    // (Implementation of harmony generation logic goes here)
+    // Additional logic for generating harmonies...
 }
 
 bool HarmonyGenerator::validateHarmonyLevel(float level) {
