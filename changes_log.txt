@@ -1,9 +1,5 @@
 # Changes Log
 
-## HarmonyGenerator.cpp
-- Added checks for empty input vocal track in `generateHarmonies()`.
-- Added validation for harmony level to ensure it is between 0.0 and 1.0.
-
-## HarmonyControl.cpp
-- No changes made.
+## HarmonyGenerator.h
+- Added declaration for `validateHarmonyLevel(float level)` to validate the harmony level.
 
