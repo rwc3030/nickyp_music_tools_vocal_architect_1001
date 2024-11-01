@@ -9,6 +9,7 @@ public:
     void setInputVocalTrack(const String& track);
     void generateHarmonies();
     bool validateHarmonyLevel(float level); // Declaration for validateHarmonyLevel
+    bool handleAudioFileType(const String& track); // Declaration for handleAudioFileType
 
 private:
     String inputVocalTrack;
