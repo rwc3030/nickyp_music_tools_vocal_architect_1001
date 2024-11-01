@@ -27,3 +27,12 @@ void HarmonyGenerator::generateHarmonies() {
     // Logic to generate harmonies based on the input vocal track and harmony level
     // This is a placeholder for the actual harmony generation logic
 }
+
+void HarmonyGenerator::handleAudioFileType(const String& fileType) {
+    // Logic to handle different audio file types
+    if (fileType == ".wav" || fileType == ".mp3") {
+        DBG("Supported audio file type: " + fileType);
+    } else {
+        DBG("Unsupported audio file type: " + fileType);
+    }
+}
