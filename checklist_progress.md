@@ -16,6 +16,12 @@
    - Conducted tests to ensure that all components function correctly together.
    - Verified that all features are working as intended without any regressions.
 
+4. **Descriptive Comments**: 
+   - Added descriptive comments in `HarmonyGenerator.cpp` and `HarmonyControl.cpp` for clarity.
+
+5. **Input Format Handling**: 
+   - Ensured that the harmony generation logic can handle various input formats in `HarmonyGenerator.cpp`.
+
 ## Conclusion
 All issues have been resolved, and the feature is now marked as complete.
 

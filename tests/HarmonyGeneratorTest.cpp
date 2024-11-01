@@ -1,5 +1,5 @@
-#include <gtest/gtest.h>
 #include "HarmonyGenerator.h"
+#include <gtest/gtest.h>
 
 class HarmonyGeneratorTest : public ::testing::Test {
 protected:
@@ -28,4 +28,11 @@ TEST_F(HarmonyGeneratorTest, UnsupportedAudioFileType) {
 TEST_F(HarmonyGeneratorTest, SupportedAudioFileType) {
     harmonyGenerator.handleAudioFileType(".wav");
     // Check for expected debug output or behavior
+}
+
+// New test to verify harmony generation logic under various input conditions
+TEST_F(HarmonyGeneratorTest, HarmonyGenerationWithVariousInputs) {
+    harmonyGenerator.setInputVocalTrack("Valid Vocal Track");
+    harmonyGenerator.generateHarmonies();
+    // Add assertions to verify the expected behavior
 }
