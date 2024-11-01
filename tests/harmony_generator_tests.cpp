@@ -24,3 +24,8 @@ TEST_F(HarmonyGeneratorTest, EdgeCaseHandling) {
     harmonyGenerator.setInputVocalTrack("Edge Case Track");
     EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
+
+TEST_F(HarmonyGeneratorTest, UnsupportedAudioFileType) {
+    harmonyGenerator.handleAudioFileType(".txt");
+    // Check for expected debug output or behavior
+}
