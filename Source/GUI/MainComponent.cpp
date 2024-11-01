@@ -5,7 +5,10 @@ MainComponent::MainComponent() {
     addAndMakeVisible(harmonyGenerator);
     
     generateButton.setButtonText("Generate Harmonies");
-    generateButton.onClick = [this] { harmonyGenerator.generateHarmonies(); };
+    generateButton.onClick = [this] { 
+        harmonyGenerator.generateHarmonies(); 
+        harmonyOutput.setText("Generating harmonies..."); // Update UI
+    };
     addAndMakeVisible(generateButton);
     
     harmonyOutput.setText("Generated Harmonies will appear here.");

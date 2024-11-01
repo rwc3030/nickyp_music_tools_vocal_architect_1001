@@ -15,11 +15,6 @@ TEST_F(HarmonyGeneratorTest, EmptyInputVocalTrack) {
     EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
 
-TEST_F(HarmonyGeneratorTest, ValidInputVocalTrack) {
-    harmonyGenerator.setInputVocalTrack("Sample Vocal Track"); // Assuming a method to set the input
-    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
-}
-
 TEST_F(HarmonyGeneratorTest, UnsupportedAudioFileType) {
     harmonyGenerator.handleAudioFileType(".txt");
     // Check for expected debug output or behavior
@@ -30,9 +25,13 @@ TEST_F(HarmonyGeneratorTest, SupportedAudioFileType) {
     // Check for expected debug output or behavior
 }
 
-// New test to verify harmony generation logic under various input conditions
 TEST_F(HarmonyGeneratorTest, HarmonyGenerationWithVariousInputs) {
     harmonyGenerator.setInputVocalTrack("Valid Vocal Track");
     harmonyGenerator.generateHarmonies();
     // Add assertions to verify the expected behavior
+}
+
+TEST_F(HarmonyGeneratorTest, HarmonyGenerationWithEmptyTrack) {
+    harmonyGenerator.setInputVocalTrack("");
+    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
