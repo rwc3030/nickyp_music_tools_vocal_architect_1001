@@ -19,17 +19,19 @@ void HarmonyGenerator::setInputVocalTrack(const String& track) {
 void HarmonyGenerator::generateHarmonies() {
     float harmonyLevel = harmonySlider.getValue();
 
+    // Check if the input vocal track is empty
     if (inputVocalTrack.isEmpty()) {
         DBG("Input vocal track is empty. Cannot generate harmonies.");
         return;
     }
 
     // Logic to generate harmonies based on the input vocal track and harmony level
-    // This is a placeholder for the actual harmony generation logic
     // Ensure that the harmony generation logic can handle various input formats
+    // This is a placeholder for the actual harmony generation logic
 }
 
 void HarmonyGenerator::handleAudioFileType(const String& fileType) {
+    // Check for supported audio file types
     if (fileType == ".wav" || fileType == ".mp3") {
         DBG("Supported audio file type: " + fileType);
     } else {
