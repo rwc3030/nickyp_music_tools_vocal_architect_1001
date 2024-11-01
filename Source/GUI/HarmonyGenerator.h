@@ -13,8 +13,8 @@ public:
     void handleAudioFileType(const String& fileType); // New method to handle different audio file types
 
 private:
-    Slider harmonySlider;
-    String inputVocalTrack;
+    Slider harmonySlider; // Slider to control harmony level
+    String inputVocalTrack; // Input vocal track for harmony generation
 };
 
 #endif // HARMONYGENERATOR_H
