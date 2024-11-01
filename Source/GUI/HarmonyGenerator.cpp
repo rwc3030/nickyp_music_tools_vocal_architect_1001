@@ -36,5 +36,7 @@ void HarmonyGenerator::handleAudioFileType(const String& fileType) {
         DBG("Supported audio file type: " + fileType);
     } else {
         DBG("Unsupported audio file type: " + fileType);
+        // Handle unsupported file type
+        throw std::invalid_argument("Unsupported audio file type: " + fileType);
     }
 }

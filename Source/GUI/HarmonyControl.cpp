@@ -14,6 +14,10 @@ public:
         harmonySlider.setBounds(10, 10, getWidth() - 20, 20); // Set bounds for the slider
     }
 
+    void resetHarmonyLevel() {
+        harmonySlider.setValue(0.5); // Reset to default value
+    }
+
 private:
     Slider harmonySlider; // Slider for adjusting harmony level
     HarmonyGenerator& harmonyGenerator; // Reference to the HarmonyGenerator instance
