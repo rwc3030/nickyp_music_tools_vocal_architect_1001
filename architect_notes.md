@@ -25,3 +25,15 @@
 - Ensured that all source files are organized under the 'Source' directory, with appropriate subdirectories for 'Core' and 'GUI'.
 - Verified that test files are located in the 'Tests' directory under the appropriate subdirectory.
 
+## Gaps to Feature Completeness
+
+1. **User Feedback Mechanism**: There is currently no mechanism to provide users with feedback on the status of the harmony generation process. Implementing a progress indicator or status messages would enhance user experience.
+
+2. **Advanced Harmony Customization**: Users should have the ability to customize the generated harmonies further, such as adjusting the intervals or selecting specific harmony types. This feature is not yet implemented.
+
+3. **Error Handling for Unsupported Formats**: While there is basic error handling for unsupported audio file types, more comprehensive error messages and user guidance are needed to improve usability.
+
+4. **Performance Optimization**: The harmony generation process may require optimization for real-time performance, especially when handling larger audio files or multiple tracks simultaneously.
+
+5. **Comprehensive Testing**: Additional unit tests are needed to cover edge cases and ensure that all components function correctly under various conditions, particularly for the new features being added.
+
