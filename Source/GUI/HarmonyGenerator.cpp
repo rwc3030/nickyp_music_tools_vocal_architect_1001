@@ -27,6 +27,7 @@ void HarmonyGenerator::generateHarmonies() {
     }
 
     // Harmony generation logic goes here
+    DBG("Generating harmonies with level: " + String(harmonyLevel));
 }
 
 bool HarmonyGenerator::validateHarmonyLevel(float level) {
