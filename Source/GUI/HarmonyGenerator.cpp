@@ -25,6 +25,12 @@ void HarmonyGenerator::generateHarmonies() {
         return;
     }
 
+    // Check for extreme values for harmony levels
+    if (harmonyLevel < 0.0f || harmonyLevel > 1.0f) {
+        DBG("Harmony level out of bounds. Must be between 0.0 and 1.0.");
+        return;
+    }
+
     // Logic to generate harmonies based on the input vocal track and harmony level
 }
 
