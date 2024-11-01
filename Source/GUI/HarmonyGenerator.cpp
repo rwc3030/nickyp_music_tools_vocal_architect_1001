@@ -13,6 +13,7 @@ void HarmonyGenerator::setInputVocalTrack(const String& track) {
 }
 
 void HarmonyGenerator::generateHarmonies() {
+    // Check if the input vocal track is empty
     if (inputVocalTrack.isEmpty()) {
         DBG("Input vocal track is empty. Please provide a valid track.");
         return; // Exit if the input vocal track is empty
@@ -37,7 +38,8 @@ void HarmonyGenerator::generateHarmonies() {
 }
 
 bool HarmonyGenerator::validateHarmonyLevel(float level) {
-    return level >= 0.0f && level <= 1.0f; // Validate that the level is between 0 and 1
+    // Validate that the level is between 0 and 1
+    return level >= 0.0f && level <= 1.0f; 
 }
 
 bool HarmonyGenerator::handleAudioFileType(const String& track) {
