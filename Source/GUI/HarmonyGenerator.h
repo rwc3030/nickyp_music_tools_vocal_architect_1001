@@ -12,8 +12,8 @@ public:
     bool handleAudioFileType(const String& track); // Declaration for handleAudioFileType
 
 private:
-    String inputVocalTrack;
-    Slider harmonySlider;
+    String inputVocalTrack; // Stores the input vocal track
+    Slider harmonySlider; // Slider for adjusting harmony level
     // Additional members...
 };
 
