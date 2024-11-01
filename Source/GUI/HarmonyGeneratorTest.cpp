@@ -27,10 +27,19 @@ TEST_F(HarmonyGeneratorTest, InvalidHarmonyLevel) {
 }
 
 TEST_F(HarmonyGeneratorTest, SupportedAudioFileType) {
-    EXPECT_NO_THROW(harmonyGenerator.handleAudioFileType(".wav"));
-    EXPECT_NO_THROW(harmonyGenerator.handleAudioFileType(".mp3"));
+    EXPECT_TRUE(harmonyGenerator.handleAudioFileType("Sample.wav"));
+    EXPECT_TRUE(harmonyGenerator.handleAudioFileType("Sample.mp3"));
 }
 
 TEST_F(HarmonyGeneratorTest, UnsupportedAudioFileType) {
-    EXPECT_FALSE(harmonyGenerator.handleAudioFileType(".txt"));
+    EXPECT_FALSE(harmonyGenerator.handleAudioFileType("Sample.txt"));
+}
+
+TEST_F(HarmonyGeneratorTest, HarmonyLevelBoundary) {
+    harmonyGenerator.setInputVocalTrack("Sample Vocal Track.wav");
+    harmonyGenerator.harmonySlider.setValue(0.0); // Set to minimum valid harmony level
+    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
+
+    harmonyGenerator.harmonySlider.setValue(1.0); // Set to maximum valid harmony level
+    EXPECT_NO_THROW(harmonyGenerator.generateHarmonies());
 }
