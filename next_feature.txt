@@ -1,8 +1,11 @@
 # Issues to Address
 
 1. Review the generated code for logical flow.
+   - Consider adding more descriptive comments in the code for clarity.
 2. Check for edge cases that may not have been handled.
+   - Implement handling for empty or null input vocal tracks to prevent runtime errors.
 3. Ensure functional integrity across all components.
+   - Add tests to verify harmony generation logic under various input conditions.
 
 ## Milestone
 - Milestone: Version 1.0 Release
@@ -22,6 +25,4 @@
 - Users should be able to adjust the generated harmonies in real-time.
 
 ## Status
-All issues have been resolved. The feature is now marked as complete.
-
-*Note: The feature is not marked as complete until all issues are resolved.*
+All issues have been identified. The feature is not marked as complete.
